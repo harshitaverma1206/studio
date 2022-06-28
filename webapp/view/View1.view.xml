@@ -1,0 +1,30 @@
+<mvc:View xmlns:cards="sap.f.cards"
+    controllerName="new.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:grid="sap.ui.layout.cssgrid"
+    xmlns:core="sap.ui.core"
+    xmlns:tnt="sap.tnt"
+    xmlns:demo="new.control"
+    
+>
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+               <Page>
+             <Button text="OpenPdf" press="openPdf"/>
+               <PDFViewer source="{/Source}" title="SAP" height="600px">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+			</PDFViewer>
+            <Button text="Next" press="goNext"></Button>
+            <Button text="Play" press="playAudio"></Button>
+            <demo:Video class="vid" src="/model/bunny.mp4"/>
+                    <content />
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

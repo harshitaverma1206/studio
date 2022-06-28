@@ -1,0 +1,23 @@
+/* Enter your custom styles here */
+.stylePageLayout{
+    background-color: rgb(240, 120, 194);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+    
+}
+.side-navigation-demo{
+    background-color: rgb(142, 15, 173);
+}
+
+.mini{
+    background-color: rgb(25, 173, 161);
+    text-decoration: white;
+}
+.sideNavigation{
+    color: rgb(142, 15, 173);
+}
+
+
