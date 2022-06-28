@@ -1,0 +1,105 @@
+<mvc:View 
+    controllerName="login.controller.View3"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:smartVariantManagement="sap.ui.comp.smartvariants"
+    
+>
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+               <Page class="w3-backGround">
+              
+                <!-- Header container -->
+                <Text text="Header container"/>
+                	<HeaderContainer showDividers="false">
+                    	
+                        <Button icon="sap-icon://accelerated" />
+                        <Button icon="sap-icon://accelerated" />
+                        <FeedContent contentText="@@notify Great outcome of the Presentation today. The new functionality and the new design was well received."
+					 subheader="about 1 minute ago in Computer Market" />
+                    </HeaderContainer>
+
+<!-- Icontab bar -->
+ <Text text="Icontabbar"/>
+                    	<IconTabBar
+		id="idIconTabBarMulti"
+		expanded="{device>/isNoPhone}"
+		class="sapUiResponsiveContentPadding">
+		<items>
+			<IconTabFilter icon="sap-icon://hint" key="info">
+				<Text text="Info content goes here ..." />
+			</IconTabFilter>
+			<IconTabFilter
+				icon="sap-icon://attachment"
+                iconColor="Positive"
+				key="attachments"
+				count="3">
+				<Text text="Attachments go here ..." />
+			</IconTabFilter>
+			<IconTabFilter
+				icon="sap-icon://notes"
+                iconColor="Negative"
+				key="notes"
+				count="12">
+				<Text text="Notes go here ..." />
+			</IconTabFilter>
+			<IconTabFilter icon="sap-icon://group" key="people">
+				<Text text="People content goes here ..." />
+			</IconTabFilter>
+		</items>
+	</IconTabBar>
+<!-- tab container -->
+<Text text="tabContainer"/>
+
+    	<TabContainer backgroundDesign="Standard">
+        
+		<items >
+			<TabContainerItem icon="sap-icon://notes">
+				<content>
+					<Label text="First tab"/>
+				</content>
+			</TabContainerItem>
+            <TabContainerItem icon="sap-icon://attachment">
+				<content>
+					<Label text="Hello how are you"/>
+				</content>
+			</TabContainerItem>
+		</items>
+	</TabContainer>
+
+<!-- slide tile -->
+<Text text="slide tile"/>
+    <SlideTile class="sapUiTinyMarginBegin sapUiTinyMarginTop">
+    <GenericTile
+				backgroundImage="https://sapui5.hana.ondemand.com/test-resources/sap/m/demokit/sample/SlideTile/images/NewsImage2.png"
+				frameType="TwoByOne" press="pressOnTileOne">
+				<TileContent footer="August 21, 2016">
+					<NewsContent
+						contentText="SAP Unveils Powerful New Player Comparision Tool Exclusively on NFL.com"
+						subheader="Today, SAP News" />
+				</TileContent>
+			</GenericTile>
+			<GenericTile 
+				backgroundImage="https://sapui5.hana.ondemand.com/test-resources/sap/m/demokit/sample/SlideTile/images/NewsImage1.png"
+				frameType="TwoByOne" press="pressOnTileTwo">
+				<TileContent footer="August 21, 2016">
+					<NewsContent
+						contentText="Wind Map: Monitoring Real-Time and Forecasted Wind Conditions across the Globe"
+						subheader="Today, SAP News" />
+				</TileContent>
+			</GenericTile>
+    </SlideTile>
+    <Button text="Next" press="onNext"/>
+                 <content />
+                
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+    	
+</mvc:View>
+
+ 

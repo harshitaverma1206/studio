@@ -1,0 +1,79 @@
+<!-- <mvc:View controllerName="login.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content />
+    </Page>
+</mvc:View> -->
+<mvc:View 
+    controllerName="login.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.f"
+	xmlns:card="sap.f.cards"
+    xmlns:viz="sap.viz.ui5.controls"
+    xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+    xmlns:viz.data="sap.viz.ui5.data"
+    
+>
+    <Shell id="shell">
+        <App id="app">
+            <pages>
+               <Page class="w3-backGround">
+              <!-- column -->
+               <viz:VizFrame id="vizframe" vizType="column" >
+              <viz:dataset>
+                    <viz.data:FlattenedDataset data="{/Companies}" id="flateData">
+                        <viz.data:dimensions>
+                            <viz.data:DimensionDefinition name="CompanyName"
+                                value="{CompanyName}" />
+                        </viz.data:dimensions>
+                        <viz.data:measures>
+                            <viz.data:MeasureDefinition name="EmployeeCount"
+                                value="{EmployeeCount}" />
+                        </viz.data:measures>
+                    </viz.data:FlattenedDataset>
+                </viz:dataset>
+
+                <viz:feeds>
+                    <viz.feeds:FeedItem id='valueAxisFeed'  uid="categoryAxis"  type="Dimension"
+                        values="CompanyName" />
+                    <viz.feeds:FeedItem id='categoryAxisFeed'  uid="valueAxis" type="Measure"
+                        values="EmployeeCount" />
+                </viz:feeds>
+               </viz:VizFrame>
+
+<!-- bar -->
+               <viz:VizFrame id="vizframed" vizType="bar" >
+              <viz:dataset>
+                    <viz.data:FlattenedDataset data="{/Companies}" id="flateDatad">
+                        <viz.data:dimensions>
+                            <viz.data:DimensionDefinition name="CompanyName"
+                                value="{CompanyName}" />
+                        </viz.data:dimensions>
+                        <viz.data:measures>
+                            <viz.data:MeasureDefinition name="EmployeeCount"
+                                value="{EmployeeCount}" />
+                        </viz.data:measures>
+                    </viz.data:FlattenedDataset>
+                </viz:dataset>
+
+                <viz:feeds>
+                    <viz.feeds:FeedItem id='valueAxisFeedd'  uid="categoryAxis"  type="Dimension"
+                        values="CompanyName" />
+                    <viz.feeds:FeedItem id='categoryAxisFeedd'  uid="valueAxis" type="Measure"
+                        values="EmployeeCount" />
+                </viz:feeds>
+               </viz:VizFrame>  
+               <Button text="Next" press="onPress"></Button>           
+             
+                    <content />
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+    	
+</mvc:View>
+
